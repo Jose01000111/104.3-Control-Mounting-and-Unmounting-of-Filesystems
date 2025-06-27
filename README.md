@@ -17,31 +17,20 @@ I’ve included some helpful links to guide you through the lab and for studying
 ## 1️⃣ Manually Mount and Unmount Filesystems
 ### 🔹 Create and format a loopback image file
 
-bash
-Copy
-Edit
-dd if=/dev/zero of=/tmp/labdisk.img bs=1M count=100
-mkfs.ext4 /tmp/labdisk.img
+![OPYTkJn](https://github.com/user-attachments/assets/8b3b976c-3da5-4f36-8472-dc6bebad1e55)
+
 ### 🔹 Mount the loopback image to a directory
 
-bash
-Copy
-Edit
-mkdir /mnt/labmount
-mount -o loop /tmp/labdisk.img /mnt/labmount
+![IPKY5BR](https://github.com/user-attachments/assets/25955fea-4a61-469c-9e28-81409ce81f47)
+
 ### 🔹 Verify the mount
 
-bash
-Copy
-Edit
-mount | grep labmount
-df -h /mnt/labmount
+![9PyqH01](https://github.com/user-attachments/assets/bdcc8254-52a4-4140-a323-0ad38e835380)
+
 ### 🔹 Unmount the filesystem
 
-bash
-Copy
-Edit
-umount /mnt/labmount
+![Tba06Ic](https://github.com/user-attachments/assets/4aa18513-f151-48f4-9a58-fb0425a247a2)
+
 ## 2️⃣ Configure Filesystem Mounting on Bootup
 ### 🔹 Create a new mount point and entry in /etc/fstab
 
@@ -61,22 +50,16 @@ df -h | grep persistent
 ## 3️⃣ Configure User-Mountable Removable Filesystems
 ### 🔹 Create a new mount point under /media/
 
-bash
-Copy
-Edit
-mkdir /media/myusb
+![o5D7SA6](https://github.com/user-attachments/assets/48b57d7a-d88a-4429-867d-9627082d4662)
+
 ### 🔹 Simulate a removable device (loop again) and allow user access
 
-bash
-Copy
-Edit
-mount -o loop,uid=$(id -u),gid=$(id -g) /labdisk.img /media/myusb
-🔹 Test unmounting as a regular user (may require permissions adjustment)
+![nNmip9s](https://github.com/user-attachments/assets/75a62604-a54e-4395-a97c-b45c5ea4ee6b)
 
-bash
-Copy
-Edit
-umount /media/myusb
+###🔹 Test unmounting as a regular user (may require permissions adjustment)
+
+![nNmip9s](https://github.com/user-attachments/assets/32d9c270-4c21-42e1-9d1d-40d86e4bc431)
+
 ## 4️⃣ Use of Labels and UUIDs for Identifying and Mounting Filesystems
 ### 🔹 View UUIDs and labels of partitions
 
