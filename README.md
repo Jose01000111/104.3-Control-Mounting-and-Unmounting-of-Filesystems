@@ -3,6 +3,17 @@
 ## 📝 Introduction
 In this lab, I practiced manually mounting and unmounting filesystems, configuring persistent mounts, and managing removable devices. I also explored how to identify partitions using labels and UUIDs, and gained basic awareness of systemd mount units.
 
+
+I’ve included some helpful links to guide you through the lab and for studying afterward:
+
+[EXAM OBJECTIVE 104.3](https://www.lpi.org/our-certifications/exam-101-102-objectives/#104.3_Control_mounting_and_unmounting_of_filesystems)
+
+[OBJ.104.3 NOTES]()
+
+[OBJ.104.3 LAB](https://1drv.ms/w/c/354f1c8d534fbced/EYSMSGN-WCJNhGUUcUGPqaQBDhp9DecYouOP4zA46M_WeQ?e=cGYP33)
+
+---
+
 ## 1️⃣ Manually Mount and Unmount Filesystems
 ### 🔹 Create and format a loopback image file
 
