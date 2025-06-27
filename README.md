@@ -34,64 +34,45 @@ I’ve included some helpful links to guide you through the lab and for studying
 ## 2️⃣ Configure Filesystem Mounting on Bootup
 ### 🔹 Create a new mount point and entry in /etc/fstab
 
-bash
-Copy
-Edit
-mkdir /mnt/persistent
-cp /tmp/labdisk.img /labdisk.img
-echo "/labdisk.img /mnt/persistent ext4 loop 0 0" >> /etc/fstab
+![o5D7SA6](https://github.com/user-attachments/assets/1c1a7c32-4fe2-4fb4-92c5-0896ff98f1e0)
+
 ### 🔹 Mount using fstab entry
 
-bash
-Copy
-Edit
-mount -a
-df -h | grep persistent
+![GSodaJB](https://github.com/user-attachments/assets/6349bcce-1220-40b3-a45c-9535ac360bc0)
+
 ## 3️⃣ Configure User-Mountable Removable Filesystems
 ### 🔹 Create a new mount point under /media/
 
-![o5D7SA6](https://github.com/user-attachments/assets/48b57d7a-d88a-4429-867d-9627082d4662)
+![nNmip9s](https://github.com/user-attachments/assets/06678906-266d-44b1-8cfa-b141751f92a1)
 
 ### 🔹 Simulate a removable device (loop again) and allow user access
 
-![nNmip9s](https://github.com/user-attachments/assets/75a62604-a54e-4395-a97c-b45c5ea4ee6b)
+![8F8HAeO](https://github.com/user-attachments/assets/0832899f-e831-47d2-9291-4cab1a88b658)
 
 ###🔹 Test unmounting as a regular user (may require permissions adjustment)
+![S7TjEtp](https://github.com/user-attachments/assets/3c505c30-172e-4417-887c-fd8020575f58)
 
-![nNmip9s](https://github.com/user-attachments/assets/32d9c270-4c21-42e1-9d1d-40d86e4bc431)
+
 
 ## 4️⃣ Use of Labels and UUIDs for Identifying and Mounting Filesystems
 ### 🔹 View UUIDs and labels of partitions
 
-bash
-Copy
-Edit
-blkid
-lsblk -f
+![RN5q1JL](https://github.com/user-attachments/assets/8c5c3232-5635-4ebd-b42b-b4467845d954)
+
+![8s0trYz](https://github.com/user-attachments/assets/37824ab1-13f9-4990-85b6-3943174ad856)
+
 ### 🔹 Add a label to a filesystem
 
-bash
-Copy
-Edit
-e2label /labdisk.img LABDISK
+![6w5ZGiK](https://github.com/user-attachments/assets/b071f8b2-dfa1-46f8-8006-ca1a8b1192b7)
+
 ### 🔹 Use the label in /etc/fstab
 
-bash
-Copy
-Edit
-echo "LABEL=LABDISK /mnt/bylabel ext4 loop 0 0" >> /etc/fstab
-mkdir /mnt/bylabel
-mount -a
+![VktQ86Y](https://github.com/user-attachments/assets/1df89f1f-720a-4093-b798-e17508158850)
+
 ## 5️⃣ Awareness of systemd Mount Units
 ### 🔹 Review an auto-generated .mount unit (read-only awareness)
 
-bash
-Copy
-Edit
-systemctl list-units --type=mount
-### 🔹 Optional: Create a custom .mount unit (advanced users only)
-Explore /etc/systemd/system and create a .mount file for persistent mounting.
-
+![a7oKfdG](https://github.com/user-attachments/assets/7e873fa3-2248-404e-8af4-619e318af812)
 
 ## 🧠 What I Learned
 In this lab, I learned how to manually mount and unmount filesystems and make them persist across reboots using /etc/fstab. I practiced working with UUIDs and labels to make mounting more reliable, especially when device names change. I also explored how removable devices can be configured for user mounting and gained awareness of how systemd manages mount points automatically. 🧩📚
