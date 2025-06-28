@@ -8,7 +8,7 @@ I’ve included some helpful links to guide you through the lab and for studying
 
 [EXAM OBJECTIVE 104.3](https://www.lpi.org/our-certifications/exam-101-102-objectives/#104.3_Control_mounting_and_unmounting_of_filesystems)
 
-[OBJ.104.3 NOTES]()
+[OBJ.104.3 NOTES](https://1drv.ms/w/c/354f1c8d534fbced/EcwIi7isjxNGkyRGKsCigR8B0_hn2e2xOtcvoj-4W12OQg?e=2R85f1)
 
 [OBJ.104.3 LAB](https://1drv.ms/w/c/354f1c8d534fbced/EYSMSGN-WCJNhGUUcUGPqaQBDhp9DecYouOP4zA46M_WeQ?e=cGYP33)
 
